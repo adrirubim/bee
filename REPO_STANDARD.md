@@ -6,7 +6,7 @@ This document defines the **non-negotiable repository standard** shared across:
 - `c41.ch-be`
 - `laser-packaging-laravel`
 - `iglu` (AdriRubi.es 3D experience)
-- `actividad_35` (static 3D scroll demo)
+- `bee` (Bee 3D scroll demo)
 
 The goal is to keep these repositories **homogeneous** in structure, community health files, and GitHub UX (templates + workflows), while allowing stack-specific implementation details.
 

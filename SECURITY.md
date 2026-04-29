@@ -19,7 +19,7 @@ If you discover a security vulnerability in this project, please report it **res
 ### How to report
 
 1. **Email:** [adrianmorillasperez@gmail.com](mailto:adrianmorillasperez@gmail.com)  
-   Use a descriptive subject, for example: `[Security] actividad_35 – short description`.
+   Use a descriptive subject, for example: `[Security] bee – short description`.
 2. **Include:**
    - Description of the vulnerability
    - Steps to reproduce (if possible)

@@ -15,5 +15,5 @@ This directory contains the documentation index for the repository.
 ## Operational notes
 
 - Static server: `python3 -m http.server 8000`
-- Integrity gate: `./scripts/dev-verify.sh`
+- Integrity gate (run from repo root): `./scripts/dev-verify.sh`
 

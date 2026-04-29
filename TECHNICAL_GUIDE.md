@@ -1,4 +1,4 @@
-# Technical Guide — actividad_35 (Bee 3D Scroll)
+# Technical Guide — bee (Bee 3D Scroll)
 
 Single **Flat Master Docs** technical guide for this repository.
 
