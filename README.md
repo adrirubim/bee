@@ -9,8 +9,8 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ESM-yellow?style=flat&logo=javascript&logoColor=black)](REPO_STANDARD.md)
 [![Framework](https://img.shields.io/badge/Framework-N%2FA-lightgrey?style=flat)](REPO_STANDARD.md)
 [![Three.js](https://img.shields.io/badge/Three.js-3D-black?style=flat&logo=three.js&logoColor=white)](https://threejs.org/)
-[![Tests](https://img.shields.io/github/actions/workflow/status/adrirubim/actividad_35/tests.yml?branch=main&label=Tests&style=flat&color=brightgreen)](https://github.com/adrirubim/actividad_35/actions/workflows/tests.yml)
-[![Lint](https://img.shields.io/github/actions/workflow/status/adrirubim/actividad_35/lint.yml?branch=main&label=Lint&style=flat&color=blue)](https://github.com/adrirubim/actividad_35/actions/workflows/lint.yml)
+[![Tests](https://img.shields.io/github/actions/workflow/status/adrirubim/bee/tests.yml?branch=main&label=Tests&style=flat&color=brightgreen)](https://github.com/adrirubim/bee/actions/workflows/tests.yml)
+[![Lint](https://img.shields.io/github/actions/workflow/status/adrirubim/bee/lint.yml?branch=main&label=Lint&style=flat&color=blue)](https://github.com/adrirubim/bee/actions/workflows/lint.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat)](LICENSE)
 
 ## 📋 Table of Contents
