@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = new GLTFLoader();
   const modelUrls = [
     "assets/models/flying_bee-v2.glb",
-    "https://raw.githubusercontent.com/adrirubim/bee/ab807ee87a95264d243b1cc947bc073cf6cbfb80/flying_bee.glb"
+    "https://github.com/adrirubim/bee/blob/ad92b7dade3174fe39dc5aa84c9f28b311d34aa0/assets/models/flying_bee-v2.glb"
   ];
 
   const onModelLoaded = (gltf) => {

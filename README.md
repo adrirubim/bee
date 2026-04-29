@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/img/favicon.svg" alt="Bee logo" width="96" />
+  <img src="assets/img/bee.png" alt="Bee logo" width="96" />
 </p>
 
 # Bee — 3D Scroll
