@@ -232,9 +232,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 <a id="license"></a>
 ## 📄 License
 
-MIT — See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE) for details.
 
 ---
 
-**Last Updated:** April 2026 · **Status:** Stable ✅ · **Version:** v1.0.0 · **Standard:** [REPO_STANDARD.md](REPO_STANDARD.md)
+**Last Updated:** April 2026 · **Status:** Stable ✅ · **Version:** v1.0.0 · **Stack:** [VERSION_STACK.md](VERSION_STACK.md)
 
