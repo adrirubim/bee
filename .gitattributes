@@ -1,0 +1,15 @@
+# Normalize text files automatically (uses LF in repo by default).
+* text=auto
+
+# Force LF for scripts and docs (prevents /usr/bin/env: 'bash\r' issues).
+*.sh   text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Treat common binaries as binary (no EOL conversion).
+*.glb  binary
+*.png  binary
+*.ico  binary
+*.svg  text eol=lf
+

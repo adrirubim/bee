@@ -1,0 +1,350 @@
+@import url("https://fonts.cdnfonts.com/css/devil-breeze");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/bimbo");
+
+:root {
+  --color-bg: #1b1b1b;
+  --color-text: #eef8ce;
+  --color-accent: #d1ff48;
+  --color-border: #445022;
+  --font-primary: "Poppins", sans-serif;
+  --font-deco: "devil breeze";
+    --color-link: #eef8ce;
+  --color-primary: #eef8ce;
+  --color-secondary: #9fa584;
+}
+
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Estilos base */
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  background-image:
+    url(https://assets.codepen.io/453571/bg.avif),
+    repeating-linear-gradient(to right, transparent 0 500px, #73814b33 500px 501px);
+  background-size: 100%;
+}
+
+/* Secciones generales */
+.section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.content-fit {
+  width: min(1200px, 90vw);
+  margin: auto;
+  min-height: 100vh;
+  position: relative;
+  padding-block: 10em;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-block: 1em;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  background-color: #1b1b1b11;
+  background-image: repeating-linear-gradient(to right,
+      transparent 0 500px,
+      #eee1 500px 501px);
+}
+
+header .content-fit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: unset !important;
+  padding-block: unset !important;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2em;
+}
+
+header nav ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: var(--color-accent);
+}
+
+/* Banner */
+#banner .title {
+  font-family: "devil breeze", cursive;
+  font-size: 8em;
+  color: var(--color-accent);
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  line-height: 1;
+}
+
+#banner .title::before {
+  content: attr(data-before);
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  color: oklch(0.78 0.17 80.01 / 0.19);
+  mask-image: linear-gradient(to bottom,
+      #000 -80%,
+      oklch(0 0 0 / 0),
+      #000,
+      oklch(0 0 0 / 0) 200%);
+  transform: scaleY(-1) translateY(-0.44lh);
+  text-align: center;
+}
+
+/* Imágenes decorativas */
+.section .decorate {
+  position: fixed;
+  z-index: -100;
+  pointer-events: none;
+}
+
+/* INTRO */
+#intro .content-fit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30%;
+  z-index: 10000;
+}
+
+.section .number {
+  font-family: "devil breeze", cursive;
+  font-size: 6em;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.section .content-fit .title {
+  font-family: "devil breeze", cursive;
+  font-size: 5em;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+/* Responsive ajustes de intro */
+@media screen and (max-width: 1023px) {
+  #intro .content-fit {
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section .number {
+    font-size: 5em;
+  }
+
+  .section .content-fit .title {
+    font-size: 2em;
+  }
+}
+
+/* CONTACT */
+#contact .content-fit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#contact .number {
+  font-family: "devil breeze", cursive;
+  font-size: 6em;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+#contact .title {
+  font-family: "devil breeze", cursive;
+  font-size: 5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: var(--color-primary);
+}
+
+#contact table {
+  width: min(800px, 90vw);
+  margin: 2em auto;
+  font-size: 1.5em;
+  border-collapse: collapse;
+}
+
+#contact table td {
+  padding: 0.5em 1em;
+  border-bottom: 1px dashed #445022;
+}
+
+#contact table td:nth-child(1) {
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+#contact table td:nth-child(2) {
+  text-align: right;
+  font-weight: 300;
+}
+
+#contact table a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#contact table a:hover {
+  color: var(--color-accent);
+}
+
+#contact .sign {
+  font-family: "Bimbo", cursive;
+  font-size: 8em;
+  margin-top: 2em;
+  color: var(--color-accent);
+}
+
+/* Responsive ajustes para #contact */
+@media screen and (max-width: 767px) {
+  #contact .number {
+    font-size: 3.5em;
+  }
+
+  #contact .title {
+    font-size: 2.5em;
+  }
+
+  #contact table {
+    font-size: 1em;
+  }
+
+  #contact .sign {
+    font-size: 2.5em;
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: rgba(27, 27, 27, 0.7);
+  /* border-top: 1px solid var(--color-border); */
+  padding: 2em 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 50;
+  gap: 1.5em;
+  max-width: 100%;
+}
+
+/* Navegación social */
+.social-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2em;
+  padding: 0;
+  margin: 0;
+}
+
+.social-nav ul li {
+  list-style: none;
+}
+
+.social-nav ul li a {
+  font-family: var(--font-primary);
+  font-size: 1em;
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-nav ul li a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* Texto de copyright */
+.footer-copy {
+  font-size: 0.9em;
+  color: #aaa;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media screen and (max-width: 767px) {
+  .social-nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .footer-copy {
+    font-size: 0.8em;
+  }
+}
+
+
+/* CONTENEDOR DE THREE.JS */
+#container3D {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 1;
+  will-change: transform;
+}

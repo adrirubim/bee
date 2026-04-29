@@ -1,0 +1,38 @@
+name: Security
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify repository standard
+        run: |
+          chmod +x scripts/verify-repo-standard.sh
+          ./scripts/verify-repo-standard.sh
+
+      - name: Basic secret heuristics (best-effort)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-files -z \
+            -- ':!*.png' ':!*.jpg' ':!*.jpeg' ':!*.gif' ':!*.glb' ':!*.ktx2' ':!*.drc' ':!*.ogg' ':!*.mp4' ':!*.webm' ':!*.wasm' ':!*.pdf' ':!*.exr' \
+            -- ':!.github/workflows/security.yml' \
+            | xargs -0 grep -nIE '(AWS_SECRET_ACCESS_KEY|AWS_ACCESS_KEY_ID|BEGIN (RSA|OPENSSH) PRIVATE KEY|xox[baprs]-|ghp_[A-Za-z0-9]{36,}|AIzaSy[A-Za-z0-9_-]{30,})'; then
+            echo "Potential secret detected. Please remove/rotate credentials."
+            exit 1
+          fi
+          echo "OK"
+

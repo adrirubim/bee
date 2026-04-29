@@ -1,0 +1,30 @@
+name: Lint
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify repository standard
+        run: |
+          chmod +x scripts/verify-repo-standard.sh
+          ./scripts/verify-repo-standard.sh
+
+      - name: Local integrity gate
+        run: |
+          chmod +x scripts/dev-verify.sh
+          ./scripts/dev-verify.sh
+
